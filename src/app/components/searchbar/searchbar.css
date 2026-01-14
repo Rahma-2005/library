@@ -1,8 +1,27 @@
-.search{
+.search {
     display: flex;
-
+    gap: 10px; /* espace entre les inputs */
+    justify-content: center; /* centre horizontalement */
+    align-items: center; /* centre verticalement */
+    margin: 20px 0; /* un peu d'espace au-dessus et en dessous */
 }
-input{
+
+input {
     border-radius: 10px;
-    height: 20px;
+    padding: 8px 12px; /* plus de confort pour écrire */
+    height: 36px; /* taille plus adaptée */
+    border: 1px solid #ccc; /* bord gris clair */
+    font-size: 16px; /* texte plus lisible */
+    transition: all 0.3s ease; /* effet smooth pour hover/focus */
+}
+
+input:focus {
+    border-color: #007bff; /* bleu au focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* léger glow */
+    outline: none; /* supprime le contour par défaut */
+}
+
+input::placeholder {
+    color: #aaa; /* placeholder gris clair */
+    font-style: italic;
 }

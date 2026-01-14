@@ -17,8 +17,12 @@ searchBookByTitle(title: string) {
   );
 }
 
-  searchBookByannee(annee:number){
+searchBookByannee(annee: number) {
+  this.bookservice.getBooksList().subscribe(
+    response => this.bookservice.booksList = response.works
+      .filter(book => book.first_publish_year === annee)
+  );
+}
 
-  }
 
 }

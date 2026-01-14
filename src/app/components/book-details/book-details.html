@@ -1,17 +1,25 @@
 @if (book) {
-    <div class="book-container">
-    <div class="image">
-         <img src="https://covers.openlibrary.org/b/id/{{book.cover_id}}-M.jpg" class="img-thumbnail" alt="...">
-    </div>
+  <div class="book-container">
+
     <div class="details">
-        <h3>{{book.title}}</h3>
-        <label for="">Sous titre</label>
+      <h3>{{book.title}}</h3>
+      
+      @if (book.subtitle) {
+        <label>Sous titre</label>
         <p>{{book.subtitle}}</p>
-        <label for="">Release Date</label>
-        <p>{{book.first_publish_year|date:'longDate'}}</p>
-        <label for="">Description</label>
-        <p>{{book.description}}</p>
-        
+      }
+       @if (book.first_publish_year) {
+        <label>Publish year</label>
+        <p>{{book.first_publish_year}}</p>
+      }
+
+      @if (book.description) {
+        <label>Description</label>
+        <div [innerHTML]="book.description"></div>
+
+      }
+
+    
     </div>
-</div>
+  </div>
 }
