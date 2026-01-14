@@ -1,0 +1,17 @@
+@if (book) {
+    <div class="book-container">
+    <div class="image">
+         <img src="https://covers.openlibrary.org/b/id/{{book.cover_id}}-M.jpg" class="img-thumbnail" alt="...">
+    </div>
+    <div class="details">
+        <h3>{{book.title}}</h3>
+        <label for="">Sous titre</label>
+        <p>{{book.subtitle}}</p>
+        <label for="">Release Date</label>
+        <p>{{book.first_publish_year|date:'longDate'}}</p>
+        <label for="">Description</label>
+        <p>{{book.description}}</p>
+        
+    </div>
+</div>
+}

@@ -1,0 +1,10 @@
+<div class="books">
+    @for (book of bookService.booksList; track $index) {
+        <div class="card" (click)="navigateTo(book.key)" >
+            <img src="https://covers.openlibrary.org/b/id/{{book.cover_id}}-M.jpg" class="img-thumbnail" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{book.title}}</h5>
+            </div>
+        </div>
+    }   
+</div>
